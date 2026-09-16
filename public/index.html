@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>NoteFlow</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="hero">
+
+      <div>
+        <p class="eyebrow">
+          FULL-STACK CRUD APP
+        </p>
+
+        <h1>NoteFlow</h1>
+
+        <p class="subtitle">
+          Capture ideas, tasks and reminders in one place.
+        </p>
+      </div>
+
+      <span id="noteCount" class="count">
+        0 notes
+      </span>
+
+    </header>
+
+
+    <section class="card composer">
+
+      <h2>Create a Note</h2>
+
+      <form id="noteForm">
+
+        <label for="title">
+          Title
+        </label>
+
+        <input
+          type="text"
+          id="title"
+          maxlength="100"
+          placeholder="e.g. Project ideas"
+          required
+        >
+
+
+        <label for="content">
+          Content
+        </label>
+
+        <textarea
+          id="content"
+          rows="5"
+          maxlength="2000"
+          placeholder="Write your note here..."
+          required
+        ></textarea>
+
+
+        <button type="submit">
+          Add Note
+        </button>
+
+        <p
+          id="status"
+          class="status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </section>
+
+
+    <section class="notes-section">
+
+      <div class="section-heading">
+
+        <h2>Your Notes</h2>
+
+        <button
+          id="refreshBtn"
+          class="secondary"
+        >
+          Refresh
+        </button>
+
+      </div>
+
+
+      <div
+        id="notesGrid"
+        class="notes-grid"
+      ></div>
+
+
+      <div
+        id="emptyState"
+        class="empty"
+      >
+
+        <div class="empty-icon">
+          📝
+        </div>
+
+        <h3>
+          No notes yet
+        </h3>
+
+        <p>
+          Create your first note above.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
